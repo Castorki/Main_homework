@@ -14,5 +14,28 @@
 
 
 
+void PrintArray(string[] FirstArray)
+{
+    for (int i = 0; i < FirstArray.Length; i++)
+    {
+        if (i != FirstArray.Length - 1)
+        {
+            Console.Write(FirstArray[i] + ", ");
+        }
+        else
+        {
+            Console.Write(FirstArray[i]);
+        }
+    }
+    Console.WriteLine();
+}
+
+string[] FirstArray = { "Hello", "World", "2", ":-)" };
+
+PrintArray(FirstArray);
+
+
+
+
 
 

@@ -10,30 +10,23 @@
 
 
 
-string CountOfElementsLength(string[] FirstArray)
+string[] CountOfElementsLength(string[] FirstArray)
 {
-    string Result = string.Empty;
+    string[] SecondArray = new string[FirstArray.Length/2];
+    int i = 0;
     foreach (string str in FirstArray)
     {
         if (str.Length <= 3)
         {
-            Result += str + " ";
+            SecondArray[i] = str;
+            i++;
         }
+
     }
-    return Result;
+    return SecondArray;
+
 }
 
-
-string[] StringsToArray(string str)
-{
-
-    string[] SecondArray = new string[str.Length];
-    for (int i = 0; i < str.Length; i++)
-    {
-        SecondArray[i] = str[i].ToString();
-    }
-    return str.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-}
 
 
 
@@ -54,9 +47,9 @@ void PrintArray(string[] FirstArray)
 }
 
 string[] FirstArray = { "Hello", "World", "2", ":-)" };
-string str = CountOfElementsLength(FirstArray);
 PrintArray(FirstArray);
-PrintArray(StringsToArray(str));
+PrintArray(CountOfElementsLength(FirstArray));
+
 
 
 

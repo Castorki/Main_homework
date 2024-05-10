@@ -10,6 +10,19 @@
 
 
 
+string CountOfElementsLength(string[] FirstArray)
+{
+    string Result = string.Empty;
+    foreach (string str in FirstArray)
+    {
+        if (str.Length <= 3)
+        {
+            Result += str + " ";
+        }
+    }
+    return Result;
+}
+
 
 
 
